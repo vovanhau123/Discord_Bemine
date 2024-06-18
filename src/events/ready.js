@@ -85,17 +85,13 @@ module.exports = (client) => {
                 if (err) {
                   return console.error(err.message);
                 }
-                console.log(
-                  chalk.bgRed(
-                    "Tin nhắn đã được gửi và trạng thái được lưu trong cơ sở dữ liệu."
-                  )
-                );
+                console.log(chalk.bgRed(
+                  "Tin nhắn đã được gửi và trạng thái được lưu trong cơ sở dữ liệu."
+                ));
               }
             );
           } else {
-            console.log(
-              chalk.bgRed(`Không tìm thấy kênh với ID: ${CHANNEL_ID}`)
-            );
+            console.log(chalk.bgRed(`Không tìm thấy kênh với ID: ${CHANNEL_ID}`));
           }
         } else {
           console.log(chalk.bgRed("Tin nhắn đã được gửi trước đó."));

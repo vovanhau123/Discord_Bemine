@@ -24,11 +24,9 @@ const db = new sqlite3.Database(
           if (err) {
             console.error("Lỗi khi tạo bảng user_submissions:", err.message);
           } else {
-            console.log(
-              chalk.bgRed(
-                "Bảng user_submissions đã được tạo hoặc cập nhật thành công."
-              )
-            );
+            console.log(chalk.bgRed(
+              "Bảng user_submissions đã được tạo hoặc cập nhật thành công."
+            ));
           }
         }
       );
@@ -40,11 +38,7 @@ const db = new sqlite3.Database(
           if (err) {
             console.error("Lỗi khi tạo bảng BotStatus:", err.message);
           } else {
-            console.log(
-              chalk.bgRed(
-                "Bảng BotStatus đã được tạo hoặc cập nhật thành công."
-              )
-            );
+            console.log(chalk.bgRed("Bảng BotStatus đã được tạo hoặc cập nhật thành công."));
           }
         }
       );

@@ -143,11 +143,21 @@ async function handleButtonInteraction(interaction, client) {
             const submittedUserId = row.userId;
             const discordId = "discord:" + submittedUserId;
             mysqlConnection.query(
-              "INSERT INTO whitelist (identifier) VALUES (?)",
+              `SELECT identifier FROM whitelist WHERE identifier = ?`,
               [discordId],
               function (error, results, fields) {
                 if (error) throw error;
-                // Neat!
+                if (results.length === 0) {
+                  // Chỉ thêm nếu discordId chưa tồn tại
+                  mysqlConnection.query(
+                    "INSERT INTO whitelist (identifier) VALUES (?)",
+                    [discordId],
+                    function (error, results, fields) {
+                      if (error) throw error;
+                      // Neat!
+                    }
+                  );
+                }
               }
             );
             const approvalChannel = await client.channels.fetch(
@@ -220,11 +230,21 @@ async function handleButtonInteraction(interaction, client) {
             const submittedUserId = row.userId;
             const discordId = "discord:" + submittedUserId;
             mysqlConnection.query(
-              "INSERT INTO whitelist (identifier) VALUES (?)",
+              `SELECT identifier FROM whitelist WHERE identifier = ?`,
               [discordId],
               function (error, results, fields) {
                 if (error) throw error;
-                // Neat!
+                if (results.length === 0) {
+                  // Chỉ thêm nếu discordId chưa tồn tại
+                  mysqlConnection.query(
+                    "INSERT INTO whitelist (identifier) VALUES (?)",
+                    [discordId],
+                    function (error, results, fields) {
+                      if (error) throw error;
+                      // Neat!
+                    }
+                  );
+                }
               }
             );
             const approvalChannel = await client.channels.fetch(
@@ -302,11 +322,21 @@ async function handleButtonInteraction(interaction, client) {
             const submittedUserId = row.userId;
             const discordId = "discord:" + submittedUserId;
             mysqlConnection.query(
-              "INSERT INTO whitelist (identifier) VALUES (?)",
+              `SELECT identifier FROM whitelist WHERE identifier = ?`,
               [discordId],
               function (error, results, fields) {
                 if (error) throw error;
-                // Neat!
+                if (results.length === 0) {
+                  // Chỉ thêm nếu discordId chưa tồn tại
+                  mysqlConnection.query(
+                    "INSERT INTO whitelist (identifier) VALUES (?)",
+                    [discordId],
+                    function (error, results, fields) {
+                      if (error) throw error;
+                      // Neat!
+                    }
+                  );
+                }
               }
             );
             const approvalChannel = await client.channels.fetch(
@@ -384,11 +414,21 @@ async function handleButtonInteraction(interaction, client) {
             const submittedUserId = row.userId;
             const discordId = "discord:" + submittedUserId;
             mysqlConnection.query(
-              "INSERT INTO whitelist (identifier) VALUES (?)",
+              `SELECT identifier FROM whitelist WHERE identifier = ?`,
               [discordId],
               function (error, results, fields) {
                 if (error) throw error;
-                // Neat!
+                if (results.length === 0) {
+                  // Chỉ thêm nếu discordId chưa tồn tại
+                  mysqlConnection.query(
+                    "INSERT INTO whitelist (identifier) VALUES (?)",
+                    [discordId],
+                    function (error, results, fields) {
+                      if (error) throw error;
+                      // Neat!
+                    }
+                  );
+                }
               }
             );
             const approvalChannel = await client.channels.fetch(
@@ -466,11 +506,21 @@ async function handleButtonInteraction(interaction, client) {
             const submittedUserId = row.userId;
             const discordId = "discord:" + submittedUserId;
             mysqlConnection.query(
-              "INSERT INTO whitelist (identifier) VALUES (?)",
+              `SELECT identifier FROM whitelist WHERE identifier = ?`,
               [discordId],
               function (error, results, fields) {
                 if (error) throw error;
-                // Neat!
+                if (results.length === 0) {
+                  // Chỉ thêm nếu discordId chưa tồn tại
+                  mysqlConnection.query(
+                    "INSERT INTO whitelist (identifier) VALUES (?)",
+                    [discordId],
+                    function (error, results, fields) {
+                      if (error) throw error;
+                      // Neat!
+                    }
+                  );
+                }
               }
             );
             const approvalChannel = await client.channels.fetch(
