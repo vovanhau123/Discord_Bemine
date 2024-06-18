@@ -599,9 +599,9 @@ async function handleModalSubmit(interaction, client) {
         .addFields(
           { name: "HỌ VÀ TÊN", value: `> ${name}` },
           { name: "TUỔI", value: `> ${age.toString()}` },
-          { name: "GIỚI TÍNH", value: `> gender` },
-          { name: "LINK STEAM", value: `> steam` },
-          { name: "CÂU HỎI", value: `> nameDis` },
+          { name: "GIỚI TÍNH", value: `> ${gender}` },
+          { name: "LINK STEAM", value: `> ${steam}` },
+          { name: "CÂU HỎI", value: `> ${nameDis}` },
           { name: "UserID", value: `\`\`\`\n${userId}\n\`\`\`` },
           { name: "UserName", value: `\`\`\`\n${userName}\n\`\`\`` },
           { name: "Time", value: `\`\`\`\n${vnTimeString}\n\`\`\`` }

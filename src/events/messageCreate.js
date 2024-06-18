@@ -101,7 +101,7 @@ async function removeFromSQLite(discordId) {
 async function removeFromDatabase(discordId) {
   return new Promise((resolve, reject) => {
     mysqlConnection.query(
-      "DELETE FROM whitelisted_players WHERE discord_id = ?",
+      "DELETE FROM whitelist WHERE identifier = ?",
       [discordId],
       (error, results) => {
         if (error) {
